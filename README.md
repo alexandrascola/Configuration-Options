@@ -1,29 +1,34 @@
-# MicroBlog
+# Configuration & Options
 
-## Description
+## Project Description
 
-MicroBlog Razor Pages App for ASP.NET course where users can create/view/list blog posts. Posts are saved to a JSON file.
+This is an ASP.NET application (cloned from 9/23 MicroBlog) demonstrating configuration and options. The application uses configuration to control whether or not the comment form is displayed.
+
+
 
 ## How to Run
 
-1. Open a terminal in the MicroBlog project folder.
-2. Run: dotnet run
-3. Open the localhost address displayed in the terminal.
-4. If no posts, choose the option to create the first post.
-5. If there are posts, then choose "New Post" at top of page.
-6. Fill in required fields and click "Publish".
-7. To view the full details of a post (ex. Invictus poem that is truncated), click "ReadMore".
+1. Open the project in Visual Studio.
+2. Run the application in command prompt, and open in browser.
+3. Open any blog post "Details" or "Read More" page.
+4. When `EnableComments` is set to `false`, the comment form is hidden.
+5. When `EnableComments` is set to `true`, the comment form is displayed.
+6. Configuration is changed in appsettings.development.json and overrides the setting created in appsetting.json.
 
 ## Screenshots
 
-### Index Page
+### Comments Disabled
 
-![MicroBlog Index page](screenshots/index.png)
+![Comments disabled](screenshots/comments-disabled.png)
 
-### Create Page
+### Comments Enabled
 
-![MicroBlog Create page](screenshots/create.png)
+![Comments Enabled](screenshots/comments-textbox.png)
 
-### Details Page
+### Disabled Configuration
 
-![MicroBlog Details page](screenshots/details.png)
+![Disabled comments configuration](screenshots/disabled-comments.png)
+
+### Enabled Development Configuration
+
+![Enabled comments configuration](screenshots/enabled-comments.png)

@@ -1,11 +1,21 @@
 using MicroBlog.Services;
+using MicroBlog.Options;
+
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
 builder.Services.AddSingleton<PostStore>(); //json backend store of blog posts
 
+//Bind SiteOptions from configuration
+builder.Services.Configure<SiteOptions>(builder.Configuration.GetSection("SiteOptions"));
+
+
+
 var app = builder.Build();
+
+
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
